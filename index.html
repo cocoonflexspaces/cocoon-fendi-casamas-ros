@@ -1,0 +1,988 @@
+<title>Fendi × Casa Mas — Combined Run of Show</title>
+<style>
+:root { --cream: #F5F2E8; --cream-deep: #ECE7D6; --cream-warm: #EFE9D7; --terracotta: #F54029; --teal: #275453; --ink: #1A1A1A; --ink-soft: #4A4A4A; --ink-mute: #6B6B6B; --rule: rgba(26,26,26,0.12); --rule-soft: rgba(26,26,26,0.06); }
+*, ::before, ::after { box-sizing: border-box; margin: 0px; padding: 0px; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body { background: var(--cream-deep); color: var(--ink); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; font-size: 11pt; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+a.tel-link { border-bottom: 1px dotted; }
+a.tel-link:hover { border-bottom-style: solid; }
+.page { width: 1120px; min-height: 866px; height: auto; margin: 0 auto 32px; background: var(--cream); box-shadow: rgba(0,0,0,0.1) 0 4px 32px; overflow: hidden; display: flex; flex-direction: column; scroll-margin-top: 54px; }
+@media print {
+  @page { size: 279mm 216mm; margin: 0; }
+  body { background: var(--cream); }
+  .page { width: 279mm; height: 216mm; margin: 0; box-shadow: none; break-after: page; break-inside: avoid; overflow: hidden; }
+  .page:last-child { break-after: auto; }
+  .screen-only { display: none !important; }
+}
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: 11px 36px; border-bottom: 1px solid var(--rule); background: var(--cream); flex-shrink: 0; gap: 10px; }
+.topbar-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.topbar-mark { width: 18px; height: 18px; flex-shrink: 0; }
+.topbar-wordmark { font-size: 13px; font-weight: 800; letter-spacing: 0.02em; color: var(--ink); text-transform: lowercase; }
+.topbar-divider { width: 1px; height: 16px; background: var(--rule); flex: 0 0 auto; margin: 0 6px; }
+.topbar-title { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topbar-meta { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink-mute); white-space: nowrap; flex-shrink: 0; }
+.jumpnav { position: sticky; top: 0; z-index: 50; background: var(--ink); color: var(--cream); display: flex; gap: 6px; align-items: center; padding: 9px 16px; overflow-x: auto; white-space: nowrap; }
+.jumpnav::-webkit-scrollbar { display: none; }
+.jumpnav a { flex-shrink: 0; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 7px 12px; border-radius: 100px; background: rgba(245,242,232,0.08); color: var(--cream); }
+.jumpnav a.today { background: var(--terracotta); color: #fff; }
+.jumpnav a:hover { background: rgba(245,242,232,0.18); }
+.cover-grid { display: grid; grid-template-columns: 1fr 1fr; flex: 1 1 0%; overflow: hidden; }
+.cover-left { padding: 34px 38px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--rule); overflow: hidden; }
+.cover-right { padding: 34px 38px; display: flex; flex-direction: column; gap: 14px; overflow: hidden; }
+.superhead { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--terracotta); margin-bottom: 12px; }
+.cover-title { font-size: 44px; font-weight: 700; line-height: 0.97; letter-spacing: -0.03em; }
+.cover-title span { color: var(--terracotta); }
+.cover-subtitle { font-size: 12px; font-weight: 500; letter-spacing: -0.01em; color: var(--ink-soft); margin-top: 12px; }
+.cover-divider { width: 36px; height: 2px; background: var(--terracotta); margin: 18px 0; }
+.stat-row { display: flex; gap: 20px; margin-top: 14px; flex-wrap: wrap; }
+.stat-item .num { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: var(--terracotta); line-height: 1; white-space: nowrap; }
+.stat-item .lbl { font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-mute); margin-top: 3px; }
+.spec-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); }
+.spec-item { padding: 9px 13px; border-bottom: 1px solid var(--rule-soft); }
+.spec-item:nth-child(2n+1) { border-right: 1px solid var(--rule-soft); }
+.spec-item.full { grid-column: 1 / 3; border-right: none; }
+.spec-item:last-child, .spec-item:nth-last-child(2):not(.full) { border-bottom: none; }
+.spec-label { font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-mute); margin-bottom: 3px; }
+.spec-value { font-size: 11.5px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+.features-head { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--terracotta); margin-bottom: 7px; padding-bottom: 4px; border-bottom: 1px solid rgba(245,64,41,0.15); }
+.features-list { list-style: none; display: grid; gap: 3px; }
+.features-list li { font-size: 9px; color: var(--ink-soft); padding-left: 12px; position: relative; line-height: 1.35; }
+.features-list li::before { content: "·"; position: absolute; left: 0; color: var(--terracotta); font-weight: 700; font-size: 13px; line-height: 1; }
+.cover-footer { border-top: 1px solid var(--rule); padding-top: 11px; margin-top: 12px; display: flex; justify-content: space-between; align-items: flex-end; }
+.cover-footer-note { font-size: 8px; color: var(--ink-mute); line-height: 1.6; }
+.cover-footer-contact { font-size: 8px; color: var(--ink-soft); text-align: right; line-height: 1.6; }
+.cover-footer-contact strong { color: var(--ink); font-weight: 600; }
+.days-index { padding: 11px 14px; background: var(--cream-warm); border-left: 3px solid var(--terracotta); }
+.days-index .fi-head { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--terracotta); margin-bottom: 8px; }
+.days-index .fi-row { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; border-bottom: 1px solid var(--rule-soft); font-size: 9px; }
+.days-index .fi-row:last-child { border-bottom: none; }
+.days-index .fi-num { font-size: 9px; font-weight: 700; color: var(--terracotta); min-width: 62px; }
+.days-index .fi-name { font-weight: 600; color: var(--ink); min-width: 108px; }
+.days-index .fi-rooms { color: var(--ink-soft); font-size: 8.5px; }
+.glance-body { flex: 1 1 0%; padding: 18px 36px 14px; overflow: hidden; display: flex; flex-direction: column; gap: 12px; }
+.glance-note { font-size: 9.5px; color: var(--ink-soft); line-height: 1.55; max-width: 1040px; }
+.glance-note strong { color: var(--ink); }
+.glance-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.glance-card { background: var(--cream-warm); border-top: 3px solid var(--terracotta); padding: 10px 11px 9px; display: flex; flex-direction: column; gap: 6px; }
+.glance-card.muted { border-top-color: var(--ink-mute); opacity: 0.92; }
+.gc-date { font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-mute); }
+.gc-day { font-size: 14px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); line-height: 1.1; }
+.gc-headline { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--terracotta); }
+.gc-window { font-size: 8px; color: var(--ink-soft); line-height: 1.4; padding-top: 3px; border-top: 1px solid var(--rule-soft); }
+.gc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; margin-top: 1px; }
+.gc-list li { font-size: 7.5px; color: var(--ink-soft); padding-left: 9px; position: relative; line-height: 1.32; }
+.gc-list li::before { content: "–"; position: absolute; left: 0; color: var(--terracotta); font-weight: 700; }
+.legend-row { display: flex; gap: 18px; align-items: center; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); }
+.legend-swatch { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.legend-swatch.cocoon { background: var(--terracotta); }
+.legend-swatch.pb { background: var(--teal); }
+.quickref-cols { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; flex: 1 1 0%; overflow: hidden; }
+.quickref-panel { background: var(--cream-warm); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+.qp-head { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--terracotta); margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid rgba(245,64,41,0.18); }
+.qc-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 5px 0; border-bottom: 1px solid var(--rule-soft); }
+.qc-row:last-child { border-bottom: none; }
+.qc-who { min-width: 0; }
+.qc-name { font-size: 9.5px; font-weight: 700; color: var(--ink); }
+.qc-role { font-size: 7.8px; color: var(--ink-mute); }
+.qc-phone { font-size: 9px; font-weight: 600; color: var(--terracotta); white-space: nowrap; flex-shrink: 0; }
+.qc-phone.pb { color: var(--teal); }
+.numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.num-tile { background: var(--cream); padding: 8px 10px; border-left: 2px solid var(--terracotta); }
+.num-tile .nt-label { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-mute); margin-bottom: 3px; }
+.num-tile .nt-value { font-size: 12px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.25; }
+.ot-callout { background: var(--ink); color: var(--cream); padding: 10px 12px; margin-top: 6px; }
+.ot-callout .ot-head { font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--terracotta); margin-bottom: 4px; }
+.ot-callout .ot-rate { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; }
+.ot-callout .ot-note { font-size: 7.8px; color: rgba(245,242,232,0.75); line-height: 1.45; margin-top: 3px; }
+.items-body { flex: 1 1 0%; padding: 18px 36px 14px; overflow: hidden; display: flex; flex-direction: column; gap: 10px; }
+.items-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; flex: 1 1 0%; overflow: hidden; }
+.items-col { display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+.items-group-head { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--terracotta); padding-bottom: 5px; border-bottom: 1px solid rgba(245,64,41,0.18); }
+.item-row { display: flex; gap: 9px; padding: 6px 0; border-bottom: 1px solid var(--rule-soft); }
+.item-row:last-child { border-bottom: none; }
+.item-status { flex-shrink: 0; width: 62px; }
+.pill { display: inline-block; font-size: 6.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 2.5px 6px; border-radius: 100px; white-space: nowrap; }
+.pill.pending { background: rgba(245,64,41,0.12); color: var(--terracotta); }
+.pill.progress { background: rgba(39,84,83,0.12); color: var(--teal); }
+.pill.done { background: rgba(39,84,83,0.85); color: #fff; }
+.pill.urgent { background: var(--terracotta); color: #fff; }
+.item-text { font-size: 8.4px; color: var(--ink-soft); line-height: 1.4; }
+.item-text strong { color: var(--ink); font-weight: 600; }
+.flag-box { background: var(--cream-warm); border-left: 3px solid var(--terracotta); padding: 8px 12px; margin-top: auto; }
+.flag-box .fb-head { font-size: 7.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--terracotta); margin-bottom: 4px; }
+.flag-box .fb-text { font-size: 8.1px; color: var(--ink-soft); line-height: 1.42; }
+.day-page { display: flex; flex-direction: column; }
+.day-header { display: flex; align-items: center; justify-content: space-between; padding: 13px 36px; background: var(--cream-warm); border-bottom: 1px solid var(--rule); flex-shrink: 0; gap: 10px; flex-wrap: wrap; }
+.dh-left { display: flex; align-items: baseline; gap: 14px; }
+.dh-badge { width: 34px; height: 34px; background: var(--terracotta); color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; text-align: center; line-height: 1.05; }
+.dh-title { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); line-height: 1.1; }
+.dh-sub { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em; color: var(--ink-mute); margin-top: 2px; }
+.dh-right { text-align: right; }
+.dh-access { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--terracotta); margin-bottom: 2px; }
+.dh-access-val { font-size: 11px; font-weight: 700; color: var(--ink); }
+.day-body { flex: 1 1 0%; padding: 10px 36px 8px; overflow: hidden; display: flex; flex-direction: column; }
+.ros-table { width: 100%; border-collapse: collapse; }
+.ros-table thead th { text-align: left; font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em; color: var(--ink-mute); padding: 5px 8px; border-bottom: 1px solid var(--rule); }
+.ros-table tbody td { padding: 4.5px 8px; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+.ros-table tbody tr:last-child td { border-bottom: none; }
+.rt-time { font-size: 8.6px; font-weight: 700; color: var(--ink); white-space: nowrap; width: 78px; }
+.rt-track { width: 112px; }
+.track-pill { display: inline-flex; align-items: center; justify-content: center; width: 96px; font-size: 6.6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 4px; border-radius: 100px; white-space: nowrap; text-align: center; }
+.track-pill.cocoon { background: rgba(245,64,41,0.14); color: var(--terracotta); }
+.track-pill.pb { background: rgba(39,84,83,0.14); color: var(--teal); }
+.rt-item { font-size: 8.6px; color: var(--ink); line-height: 1.35; }
+.rt-item .rt-note { display: block; color: var(--ink-mute); font-size: 7.8px; margin-top: 1px; }
+.rt-item .flag { color: var(--terracotta); font-weight: 700; }
+.rt-owner { font-size: 7.8px; color: var(--ink-soft); width: 128px; text-align: right; white-space: nowrap; }
+.row-highlight td { background: rgba(245,64,41,0.05); }
+.day-footnote { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--rule); font-size: 7.6px; color: var(--ink-mute); line-height: 1.5; flex-shrink: 0; }
+.day-footnote strong { color: var(--terracotta); }
+.plan-footer { padding: 7px 36px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; background: var(--cream); flex-shrink: 0; gap: 8px; flex-wrap: wrap; }
+.plan-footer-left { font-size: 7.5px; color: var(--ink-mute); font-weight: 600; text-transform: uppercase; letter-spacing: 0.13em; }
+.plan-footer-center { font-size: 7.5px; color: var(--terracotta); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; }
+.plan-footer-right { font-size: 7.5px; color: var(--ink-mute); font-weight: 600; text-transform: uppercase; letter-spacing: 0.13em; }
+.team-body { flex: 1 1 0%; padding: 18px 36px 14px; overflow: hidden; display: flex; flex-direction: column; gap: 12px; }
+.team-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; flex: 1 1 0%; overflow: hidden; }
+.team-col { display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+.team-col-head { font-size: 8.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--terracotta); padding-bottom: 5px; border-bottom: 1px solid rgba(245,64,41,0.18); }
+.person-row { padding: 6px 0; border-bottom: 1px solid var(--rule-soft); }
+.person-row:last-child { border-bottom: none; }
+.p-name-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.p-name { font-size: 9.5px; font-weight: 700; color: var(--ink); letter-spacing: -0.005em; }
+.p-phone { font-size: 8.3px; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
+.p-phone.pb { color: var(--teal); }
+.p-phone.tbd { color: var(--ink-mute); font-weight: 500; }
+.p-role { font-size: 8px; color: var(--ink-mute); margin-top: 1px; }
+.p-note { font-size: 7.8px; color: var(--ink-soft); margin-top: 2px; line-height: 1.35; }
+.vendor-row { padding: 5px 0; border-bottom: 1px solid var(--rule-soft); display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.vendor-row:last-child { border-bottom: none; }
+.v-name { font-size: 8.6px; font-weight: 600; color: var(--ink); }
+.v-role { font-size: 7.6px; color: var(--ink-mute); }
+.v-phone { font-size: 7.8px; font-weight: 600; color: var(--ink-soft); text-align: right; white-space: nowrap; flex-shrink: 0; }
+.v-phone.tbd { color: var(--ink-mute); font-style: italic; font-weight: 400; }
+.screen-only { max-width: 1120px; margin: 32px auto 8px; padding: 0 20px; display: flex; gap: 14px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--ink); color: var(--cream); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border: none; border-radius: 100px; font-family: inherit; }
+.btn:hover { background: var(--terracotta); }
+@media screen and (max-width: 880px) {
+  body { font-size: 15px; }
+  .screen-only { flex-direction: column; align-items: flex-start; gap: 8px; padding: 0 16px; margin: 16px auto 0; }
+  .page { width: 100%; min-height: auto; height: auto; margin: 0 0 14px; box-shadow: none; border-bottom: 10px solid var(--cream-deep); }
+  .topbar { padding: 12px 16px; flex-wrap: wrap; row-gap: 6px; }
+  .topbar-title, .topbar-divider { display: none; }
+  .topbar-meta { font-size: 10px; }
+  .jumpnav.screen-only { flex-direction: row; align-items: center; padding: 10px 12px; margin: 0; }
+  .jumpnav a { font-size: 12px; padding: 8px 13px; }
+  .cover-grid { grid-template-columns: 1fr; }
+  .cover-left { border-right: none; border-bottom: 1px solid var(--rule); padding: 22px 18px; }
+  .cover-right { padding: 22px 18px; }
+  .cover-title { font-size: 34px; }
+  .cover-subtitle { font-size: 13px; }
+  .stat-row { gap: 16px 22px; }
+  .stat-item .num { font-size: 20px; }
+  .stat-item .lbl { font-size: 9px; }
+  .spec-grid { grid-template-columns: 1fr; }
+  .spec-item:nth-child(2n+1) { border-right: none; }
+  .spec-item.full { grid-column: 1; }
+  .spec-value { font-size: 13px; }
+  .features-list li { font-size: 12px; }
+  .cover-footer { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .cover-footer-contact { text-align: left; }
+  .cover-footer-note, .cover-footer-contact { font-size: 11px; }
+  .days-index .fi-row { flex-wrap: wrap; font-size: 12px; }
+  .days-index .fi-rooms { font-size: 11px; }
+  .glance-body { padding: 16px 16px 14px; }
+  .glance-note { font-size: 12.5px; }
+  .glance-strip { grid-template-columns: 1fr 1fr; }
+  .gc-day { font-size: 17px; }
+  .gc-headline { font-size: 10px; }
+  .gc-window, .gc-list li { font-size: 10.5px; }
+  .legend-item { font-size: 11px; }
+  .quickref-cols { grid-template-columns: 1fr; gap: 12px; }
+  .qc-name { font-size: 13px; }
+  .qc-role { font-size: 10.5px; }
+  .qc-phone { font-size: 13px; }
+  .numbers-grid { grid-template-columns: 1fr 1fr; }
+  .num-tile .nt-value { font-size: 15px; }
+  .ot-callout .ot-rate { font-size: 19px; }
+  .ot-callout .ot-note { font-size: 10.5px; }
+  .items-body { padding: 16px 16px 14px; }
+  .items-cols { grid-template-columns: 1fr; gap: 8px; }
+  .item-row { gap: 12px; padding: 9px 0; }
+  .item-status { width: 74px; }
+  .pill { font-size: 9px; padding: 4px 8px; }
+  .item-text { font-size: 12px; }
+  .flag-box .fb-text { font-size: 11.5px; }
+  .day-header { padding: 14px 16px; }
+  .dh-title { font-size: 17px; }
+  .dh-access-val { font-size: 13px; }
+  .day-body { padding: 10px 16px 14px; }
+  .ros-table, .ros-table tbody, .ros-table tr, .ros-table td { display: block; width: 100%; }
+  .ros-table thead { display: none; }
+  .ros-table tr { border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 9px; padding: 10px 12px; background: var(--cream); }
+  .ros-table tr.row-highlight { background: rgba(245,64,41,0.06); border-color: rgba(245,64,41,0.3); }
+  .ros-table td { padding: 2px 0; border-bottom: none; }
+  .rt-time { font-size: 14px; display: inline-block; margin-right: 8px; }
+  .rt-track { width: auto; display: inline-block; margin-bottom: 4px; }
+  .track-pill { width: auto; padding: 4px 10px; font-size: 10px; }
+  .rt-item { font-size: 13.5px; padding-top: 3px; }
+  .rt-item .rt-note { font-size: 12px; }
+  .rt-owner { width: auto; text-align: left; font-size: 12px; margin-top: 4px; color: var(--ink-mute); }
+  .rt-owner::before { content: "→ "; color: var(--terracotta); font-weight: 700; }
+  .day-footnote { font-size: 11px; }
+  .team-body { padding: 16px 16px 14px; }
+  .team-cols { grid-template-columns: 1fr; gap: 14px; }
+  .p-name, .v-name { font-size: 13.5px; }
+  .p-role, .v-role { font-size: 11px; }
+  .p-phone, .v-phone { font-size: 12px; }
+  .p-note { font-size: 11px; }
+}
+</style>
+
+<div class="screen-only">
+  <button class="btn" onclick="window.print()">Print → PDF ↗</button>
+  <span style="font-size:11px;color:var(--ink-mute);font-weight:600;text-transform:uppercase;letter-spacing:0.12em;">9 pages · Draft V1 · Mobile-friendly</span>
+</div>
+
+<nav class="jumpnav screen-only" style="max-width:none; margin:16px 0 0;">
+  <a href="#cover">Cover</a>
+  <a href="#quickref">Quick Ref</a>
+  <a href="#open-items">Open Items</a>
+  <a href="#day-6">Sep 6</a>
+  <a href="#day-7">Sep 7</a>
+  <a href="#day-8" class="today">Sep 8</a>
+  <a href="#day-9">Sep 9–11</a>
+  <a href="#day-12">Sep 12</a>
+  <a href="#team">Contacts</a>
+</nav>
+
+<div class="page" id="cover">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Casa Mas · 2 East 63rd Street, New York, NY 10065</div>
+    </div>
+    <div class="topbar-meta">Combined Run of Show</div>
+  </div>
+
+  <div class="cover-grid">
+    <div class="cover-left">
+      <div>
+        <div class="superhead">Fendi Private Client Presentation · New Collection &amp; Creative Director</div>
+        <div class="cover-title">The Private<br>Showing.<span> </span><span>ROS.</span></div>
+        <div class="cover-subtitle">Casa Mas · 2 East 63rd Street, New York, NY 10065 — Academy Mansion, Floors 1 &amp; 2</div>
+        <div class="cover-divider"></div>
+        <div class="stat-row">
+          <div class="stat-item"><div class="num">Sep 6</div><div class="lbl">Check-In<br>Sunday</div></div>
+          <div class="stat-item"><div class="num">~40</div><div class="lbl">Staff + Appts<br>20 Max Concurrent</div></div>
+          <div class="stat-item"><div class="num">6–12</div><div class="lbl">Sept · Check-In<br>Through Wrap</div></div>
+          <div class="stat-item"><div class="num">8am–8pm</div><div class="lbl">Contracted<br>Daily Access</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <div class="spec-label">Address</div>
+            <div class="spec-value">2 East 63rd Street (Academy Mansion)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Footprint</div>
+            <div class="spec-value">Floors 1 &amp; 2 — see Open Items re: 3rd floor</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Client / Producer</div>
+            <div class="spec-value">Fendi (LVMH)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Booking Type</div>
+            <div class="spec-value">Private appointment-based presentation</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Prep Days</div>
+            <div class="spec-value">September 6 – 7 (Sep 7 is Labor Day)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Live Appointment Days</div>
+            <div class="spec-value">September 8 – 11</div>
+          </div>
+          <div class="spec-item full">
+            <div class="spec-label">Wrap &amp; Optional Hold</div>
+            <div class="spec-value">September 12 — load-out · September 13 — optional additional breakdown day, tentative / not yet exercised</div>
+          </div>
+        </div>
+        <div class="cover-footer">
+          <div class="cover-footer-note">Prepared by Cocoon Flex Spaces<br>info@cocoonflexspaces.com · <a class="tel-link" href="tel:+19173983938">+1 (917) 398-3938</a></div>
+          <div class="cover-footer-contact"><strong>cocoonflexspaces.com</strong><br>Draft V1 · Source: Zendesk #59041 + #61044</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-right">
+      <div>
+        <div class="features-head">How to read this document</div>
+        <ul class="features-list">
+          <li>One combined timeline merging Fendi's contracted schedule with Cocoon's on-site actions</li>
+          <li>Each schedule line is tagged by owner — Cocoon Actions or Fendi / Client</li>
+          <li>Page 2 is a quick-reference page — day strip, on-site phone numbers, key numbers, OT rate</li>
+          <li>An Open Items page flags everything still pending confirmation — the COI item is time-critical</li>
+          <li>No cost, rate or commission information is included — except the overtime rate on page 2, included on request</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="features-head">Legend</div>
+        <div class="legend-row" style="padding-top:2px;">
+          <div class="legend-item"><span class="legend-swatch cocoon"></span>Cocoon Actions</div>
+          <div class="legend-item"><span class="legend-swatch pb"></span>Fendi / Client</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="days-index">
+          <div class="fi-head">Seven days at a glance · All schedules included</div>
+          <div class="fi-row">
+            <div class="fi-num">Sun 9/6</div>
+            <div class="fi-name">Check-In &amp; Setup</div>
+            <div class="fi-rooms">Floor protection install — OT to 8am start</div>
+          </div>
+          <div class="fi-row">
+            <div class="fi-num">Mon 9/7</div>
+            <div class="fi-name">Labor Day Prep</div>
+            <div class="fi-rooms">Foot access only — parade closes truck access</div>
+          </div>
+          <div class="fi-row">
+            <div class="fi-num">Tue 9/8</div>
+            <div class="fi-name">Live Day 1</div>
+            <div class="fi-rooms">8am–10pm (OT) · VIP appointments 7–9pm</div>
+          </div>
+          <div class="fi-row">
+            <div class="fi-num">Wed–Fri 9/9–11</div>
+            <div class="fi-name">Live Days 2–4</div>
+            <div class="fi-rooms">By appointment, standard 8am–8pm window</div>
+          </div>
+          <div class="fi-row">
+            <div class="fi-num">Sat 9/12</div>
+            <div class="fi-name">Wrap &amp; Load-Out</div>
+            <div class="fi-rooms">Product &amp; fixture removal, floor protection re-cycle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page day-page" id="quickref">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Week at a Glance &amp; Quick Reference</div>
+  </div>
+  <div class="glance-body">
+    <div class="glance-note">
+      Combined Run of Show for Fendi's private presentation at Casa Mas — Fendi's contracted schedule merged with Cocoon's on-site actions into one timeline. <strong>On-site day of, start here:</strong> the day strip below, phone numbers for whoever you need, and the overtime rate if a call time runs long.
+    </div>
+    <div class="legend-row">
+      <div class="legend-item"><span class="legend-swatch cocoon"></span>Cocoon Actions</div>
+      <div class="legend-item"><span class="legend-swatch pb"></span>Fendi / Client</div>
+    </div>
+    <div class="glance-strip">
+      <div class="glance-card">
+        <div class="gc-date">Sunday</div>
+        <div class="gc-day">Sep 6</div>
+        <div class="gc-headline">Check-In &amp; Setup</div>
+        <div class="gc-window">Access 8:00am – 8:00pm (OT)</div>
+        <ul class="gc-list">
+          <li>Floor protection Install #1</li>
+          <li>VM, product &amp; IT trucks</li>
+        </ul>
+      </div>
+      <div class="glance-card muted">
+        <div class="gc-date">Monday</div>
+        <div class="gc-day">Sep 7</div>
+        <div class="gc-headline">Labor Day Prep</div>
+        <div class="gc-window">Access 8:00am – 8:00pm</div>
+        <ul class="gc-list">
+          <li>Foot access only — no trucks</li>
+          <li>Florals PM · protection removed eve.</li>
+        </ul>
+      </div>
+      <div class="glance-card">
+        <div class="gc-date">Tuesday</div>
+        <div class="gc-day">Sep 8</div>
+        <div class="gc-headline">Live Day 1</div>
+        <div class="gc-window">Access 8:00am – 10:00pm (OT)</div>
+        <ul class="gc-list">
+          <li>Jewelry &amp; catering AM</li>
+          <li>VIP appointments 7–9pm</li>
+        </ul>
+      </div>
+      <div class="glance-card">
+        <div class="gc-date">Wed – Fri</div>
+        <div class="gc-day">Sep 9–11</div>
+        <div class="gc-headline">Live Days 2–4</div>
+        <div class="gc-window">Access 8:00am – 8:00pm</div>
+        <ul class="gc-list">
+          <li>By appointment</li>
+          <li>Jewelry &amp; catering AM daily</li>
+        </ul>
+      </div>
+      <div class="glance-card muted">
+        <div class="gc-date">Saturday</div>
+        <div class="gc-day">Sep 12</div>
+        <div class="gc-headline">Wrap / Load-Out</div>
+        <div class="gc-window">Access 8:00am – 8:00pm</div>
+        <ul class="gc-list">
+          <li>Product then fixtures out</li>
+          <li>Floor protection install + removal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quickref-cols">
+      <div class="quickref-panel">
+        <div class="qp-head">On-Site Quick Contacts</div>
+        <div class="qc-row">
+          <div class="qc-who"><div class="qc-name">Eduard Monteagudo</div><div class="qc-role">Cocoon Founder — scope, cost &amp; contractual lead</div></div>
+          <a class="qc-phone tel-link" href="tel:+19173983938">917-398-3938</a>
+        </div>
+        <div class="qc-row">
+          <div class="qc-who"><div class="qc-name">Roger Dong</div><div class="qc-role">Cocoon — Casa Manager (confirm assignment, see Open Items)</div></div>
+          <span class="qc-phone" style="color:var(--ink-mute);">On file</span>
+        </div>
+        <div class="qc-row">
+          <div class="qc-who"><div class="qc-name">Emily Kafka</div><div class="qc-role pb">Fendi — Senior Director, Private Client Relations</div></div>
+          <a class="qc-phone pb tel-link" href="tel:+19172441785">917-244-1785</a>
+        </div>
+        <div class="qc-row">
+          <div class="qc-who"><div class="qc-name">Elisabeth Hall</div><div class="qc-role pb">Fendi — day-to-day logistics contact</div></div>
+          <a class="qc-phone pb tel-link" href="tel:+13478613968">347-861-3968</a>
+        </div>
+        <div class="qc-row">
+          <div class="qc-who"><div class="qc-name">Jon Siegel</div><div class="qc-role">Academy Mansion — on-site venue contact</div></div>
+          <a class="qc-phone tel-link" href="tel:+12125931070">212-593-1070</a>
+        </div>
+        <div class="qc-row">
+          <div class="qc-who"><div class="qc-name">Laurel Greenman</div><div class="qc-role">Academy Mansion — contract &amp; insurance (chasing COI)</div></div>
+          <a class="qc-phone tel-link" href="tel:+13238288815">323-828-8815</a>
+        </div>
+      </div>
+      <div class="quickref-panel">
+        <div class="qp-head">Key Numbers</div>
+        <div class="numbers-grid">
+          <div class="num-tile"><div class="nt-label">Headcount</div><div class="nt-value">~40 · 20 max concurrent</div></div>
+          <div class="num-tile"><div class="nt-label">Sep 8 Access</div><div class="nt-value">8am – 10pm</div></div>
+          <div class="num-tile"><div class="nt-label">Standard Access</div><div class="nt-value">8am – 8pm</div></div>
+          <div class="num-tile"><div class="nt-label">Building Outer Limit</div><div class="nt-value">8am – midnight</div></div>
+        </div>
+        <div class="ot-callout">
+          <div class="ot-head">If You Need to Ask for Overtime</div>
+          <div class="ot-rate">$6,330 / hour</div>
+          <div class="ot-note">Applies to any time beyond the confirmed access window for that day. Two OT blocks already confirmed: 2 hrs on Sep 6 (early floor-protection install) and 2 hrs on Sep 8 (8–10pm, for the 7–9pm VIP appointments). Confirm with Eduard before extending any call time.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Week at a Glance · Page 2 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="open-items">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Open Items to Close</div>
+  </div>
+  <div class="items-body">
+    <div class="glance-note" style="margin:0;">Everything below is unresolved as of September 4 and needs an answer before or during production week. Grouped by who the next action sits with — the COI item is time-critical.</div>
+    <div class="items-cols">
+      <div class="items-col">
+        <div>
+          <div class="items-group-head">Most Urgent — Before Sunday Check-In</div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill urgent">Urgent</span></div>
+            <div class="item-text"><strong>Fendi's main venue COI.</strong> Academy Mansion (Laurel Greenman) requires $1,000,000 primary + $2,000,000 umbrella before work begins Sunday. Eduard said today it "should be ready within the hour" — but the most recent message in the thread is Laurel asking again: "we'll need it before you start on Sunday." Not yet confirmed delivered.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill pending">Pending</span></div>
+            <div class="item-text"><strong>Certificate Holder correction.</strong> Laurel flagged the address on COIs sent so far is wrong ("shouldn't be 2 East 63rd Street") — must match Academy Mansion's Insurance Requirements doc exactly.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill pending">Pending</span></div>
+            <div class="item-text"><strong>Vendor-level COIs.</strong> Corrections outstanding for ICAT Logistics, Broadway Party Rentals (Certificate Holder name), Ron Wendt Design and Robert Kane &amp; Crew LLC (Additional Insured + Waiver of Subrogation) — plus a possible duplicate entry.</div>
+          </div>
+        </div>
+        <div>
+          <div class="items-group-head">Awaiting Vendor / Quote Confirmation</div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill progress">In Progress</span></div>
+            <div class="item-text"><strong>3 rolling racks.</strong> Confirmed as a need and requested to be added — final delivery / billing not shown as closed.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill progress">In Progress</span></div>
+            <div class="item-text"><strong>WiFi / additional access points.</strong> Spectrum via three routers on-site, coverage spotty in places. Natural Wireless connected directly with Fendi/LVMH's IT lead — final scope not confirmed complete.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill progress">In Progress</span></div>
+            <div class="item-text"><strong>Additional OT for other days.</strong> Eduard flagged to the venue "we will have more OT for other days, will send details as things clear up" — nothing further quoted yet beyond the two confirmed blocks.</div>
+          </div>
+        </div>
+      </div>
+      <div class="items-col">
+        <div>
+          <div class="items-group-head">Awaiting Client Info / Decision</div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill progress">In Progress</span></div>
+            <div class="item-text"><strong>Final headcount.</strong> Not specified in either ticket's data fields. Internal working estimate: ~40 staff + appointments, 20 max concurrent — confirm final number with Emily / Elisabeth.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill pending">Pending</span></div>
+            <div class="item-text"><strong>Floor plan.</strong> Fendi stated (Aug 7) they were "unable to provide the floor plan at this time." No later message confirms it was delivered.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill pending">Pending</span></div>
+            <div class="item-text"><strong>Exact daily hours, Sep 9–11.</strong> Never pinned to specific clock times beyond the general 8am–8pm window — confirm each day's actual start/stop as the week runs.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill pending">Pending</span></div>
+            <div class="item-text"><strong>On-site sales vs. showcase-only.</strong> Cocoon asked Fendi to clarify whether transactions will be processed on premises (insurance/tax implications differ) — no documented answer found.</div>
+          </div>
+          <div class="item-row">
+            <div class="item-status"><span class="pill pending">Pending</span></div>
+            <div class="item-text"><strong>Sunday Sep 13 hold day.</strong> Discussed as an optional additional breakdown day — no confirmation found that it was formally exercised. Treat as tentative only.</div>
+          </div>
+        </div>
+        <div class="flag-box">
+          <div class="fb-head">⚑ Flags to Confirm</div>
+          <div class="fb-text">
+            <strong>Third floor.</strong> Added to the contract June 29 as a discounted add-on, then Fendi confirmed in writing Aug 7 they only need floors 1–2 — this ROS reflects Floors 1–2 as final. Reconfirm before Sunday.<br><br>
+            <strong>Venue point of contact.</strong> The operational ticket lists Jon Siegel on-site; the contract/insurance ticket runs through Laurel Greenman. Both included as contacts — confirm current division of responsibility.<br><br>
+            <strong>Casa Manager assignment.</strong> Roger Dong is documented as Casa Manager for this booking, but is also referenced elsewhere as the manager for a different property (Casa Brutal) — worth a quick internal confirmation.<br><br>
+            <strong>Security deposit / escrow — resolved Sept 1–2.</strong> No true escrow account exists; Fendi agreed to skip escrow and remit any damage payment at departure per contract, with a joint Roger / Stephen Keefe walkthrough at arrival.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Open Items · Page 3 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="day-6">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Day 1 of 7</div>
+  </div>
+  <div class="day-header">
+    <div class="dh-left">
+      <div class="dh-badge">6</div>
+      <div>
+        <div class="dh-title">Sunday, September 6 — Check-In / Prep Day 1</div>
+        <div class="dh-sub">Casa Mas — Academy Mansion, Floors 1 &amp; 2</div>
+      </div>
+    </div>
+    <div class="dh-right">
+      <div class="dh-access">Client Access</div>
+      <div class="dh-access-val">8:00 AM – 8:00 PM (OT)</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <table class="ros-table">
+      <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
+      <tbody>
+        <tr class="row-highlight">
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Client check-in. Fendi paid for 2 hours of additional space rental (OT) to move the contracted 10am start up to 8am so Visual Merchandising can begin setup at the top of the day.<span class="rt-note">Elisabeth Hall: "Our Visual Merchandising team is planning to begin setup at the start of our contracted access on Sunday, September 6th, at 8:00am."</span></td>
+          <td class="rt-owner">Fendi VM</td>
+        </tr>
+        <tr>
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Floor protection Install #1 begins across both floors, timed to the 8am call time. Wood-floor areas by NY Layout Pros; marble areas handled directly by Academy Mansion, $300 cash to Jon Siegel or Roger on arrival.<span class="rt-note flag">Property rule: install cannot happen outside contracted hours — this is exactly why the 8am OT was needed.</span></td>
+          <td class="rt-owner">NY Layout Pros</td>
+        </tr>
+        <tr>
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Two box trucks arrive with props/fixtures. Remain on-site until fully unloaded, then depart.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">~5:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Two more box trucks arrive for product delivery. Remain until unloaded, then depart.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">~5:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Van arrives for IT/internet installation needs, coordinated with Fendi's IT lead.</td>
+          <td class="rt-owner">Natural Wireless</td>
+        </tr>
+        <tr>
+          <td class="rt-time">All Day</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Parking permit active — ~4 spaces held near the Academy Mansion entrance for VM, product and floor-protection vehicles.<span class="rt-note">Confirmed through NYC's Street Activity Permit Office for Sep 5, 6, 7 &amp; 12 plus supplemental days.</span></td>
+          <td class="rt-owner">Ontime Communications Pro</td>
+        </tr>
+        <tr>
+          <td class="rt-time">—</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Condition walkthrough — Roger (Cocoon) and Stephen Keefe (Fendi VM) document baseline condition on arrival in lieu of a security deposit escrow (none exists); time-stamped video shared with Emily/Elisabeth.</td>
+          <td class="rt-owner">Roger Dong</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Sep 6 · Check-In &amp; Prep · Page 4 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="day-7">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Day 2 of 7</div>
+  </div>
+  <div class="day-header">
+    <div class="dh-left">
+      <div class="dh-badge">7</div>
+      <div>
+        <div class="dh-title">Monday, September 7 — Prep Day 2 (Labor Day)</div>
+        <div class="dh-sub">Labor Day Parade — foot access only, no truck deliveries</div>
+      </div>
+    </div>
+    <div class="dh-right">
+      <div class="dh-access">Client Access</div>
+      <div class="dh-access-val">8:00 AM – 8:00 PM</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <table class="ros-table">
+      <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
+      <tbody>
+        <tr class="row-highlight">
+          <td class="rt-time">All Day</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">No truck deliveries today — the Labor Day parade closes truck access, so the Fendi team continues setup on foot.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">End of Day</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Van arrives with florals.</td>
+          <td class="rt-owner">Florals</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Evening</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Floor protection Removal #1 — once build-out is complete and before Live Day 1 begins.<span class="rt-note">NY Layout Pros requires a 45–60 minute head start to pull materials.</span></td>
+          <td class="rt-owner">NY Layout Pros</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="day-footnote"><strong>Note</strong> — Sep 7 is a Cocoon/Fendi-shared prep day, not a Cocoon-exclusive removal day as in some other Casa properties' schedules; Fendi retains foot access throughout.</div>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Sep 7 · Labor Day Prep · Page 5 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="day-8">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Day 3 of 7</div>
+  </div>
+  <div class="day-header">
+    <div class="dh-left">
+      <div class="dh-badge">8</div>
+      <div>
+        <div class="dh-title">Tuesday, September 8 — Live Day 1</div>
+        <div class="dh-sub">By appointment — first live day, VIP appointments this evening</div>
+      </div>
+    </div>
+    <div class="dh-right">
+      <div class="dh-access">Client Access (OT)</div>
+      <div class="dh-access-val">8:00 AM – 10:00 PM</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <table class="ros-table">
+      <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Brinks van delivers jewelry.</td>
+          <td class="rt-owner">Brinks</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Catering van drops off equipment.</td>
+          <td class="rt-owner">Catering</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">7:00–9:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Special VIP appointments — the reason for tonight's extended hours.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">7:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Brinks van returns to pick up jewelry.</td>
+          <td class="rt-owner">Brinks</td>
+        </tr>
+        <tr>
+          <td class="rt-time">10:00 PM</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Hard out. <span class="flag">Any hours after 10pm bill as overtime — $6,330/hr, see page 2.</span></td>
+          <td class="rt-owner">All</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Sep 8 · Live Day 1 · Page 6 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="day-9">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Days 4–6 of 7</div>
+  </div>
+  <div class="day-header">
+    <div class="dh-left">
+      <div class="dh-badge">9–11</div>
+      <div>
+        <div class="dh-title">Wed Sep 9 · Thu Sep 10 · Fri Sep 11 — Live Days 2–4</div>
+        <div class="dh-sub">By appointment — Sep 11 is the last live day</div>
+      </div>
+    </div>
+    <div class="dh-right">
+      <div class="dh-access">Client Access</div>
+      <div class="dh-access-val">8:00 AM – 8:00 PM</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <table class="ros-table">
+      <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Brinks van delivers jewelry (same pattern each morning); collected in the evening per that day's schedule.</td>
+          <td class="rt-owner">Brinks</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Catering van drops off equipment.</td>
+          <td class="rt-owner">Catering</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">—</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Private appointments run through each day per Fendi's own schedule.<span class="rt-note flag">Exact daily clock times not yet detailed in the source tickets beyond the general 8am–8pm window — see Open Items.</span></td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="day-footnote">Day-specific detail beyond this general pattern was not broken out separately for Sep 9–11 in the source tickets. This page splits into three full day pages, each with confirmed appointment counts and exact hours, once Fendi's day-by-day schedule is finalized — <strong>expected in the updated ROS this weekend.</strong></div>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Sep 9–11 · Live Days 2–4 · Page 7 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="day-12">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Day 7 of 7</div>
+  </div>
+  <div class="day-header">
+    <div class="dh-left">
+      <div class="dh-badge">12</div>
+      <div>
+        <div class="dh-title">Saturday, September 12 — Wrap / Load-Out</div>
+        <div class="dh-sub">Check-out day</div>
+      </div>
+    </div>
+    <div class="dh-right">
+      <div class="dh-access">Client Access</div>
+      <div class="dh-access-val">8:00 AM – 8:00 PM</div>
+    </div>
+  </div>
+  <div class="day-body">
+    <table class="ros-table">
+      <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Standard delivery trucks return — product removed first, then fixtures.<span class="rt-note">Emily Kafka (Aug 13): "2 trucks at all times" on Sep 6 and Sep 12, 8am–8pm; long/standard box trucks.</span></td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Floor protection Install #2 — re-protect ahead of breakdown and load-out.</td>
+          <td class="rt-owner">NY Layout Pros</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Night</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Floor protection Removal #2 — once breakdown and load-out are fully complete.</td>
+          <td class="rt-owner">NY Layout Pros</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">All Day</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Parking permit active — same ~4-5 vehicle allowance as Sep 6, positioned near the entrance per venue guidelines.</td>
+          <td class="rt-owner">Ontime Communications Pro</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="day-footnote"><strong>Optional hold — Sunday, September 13.</strong> Reserved as an additional breakdown day, to be exercised via contract addendum if load-out runs long. No message confirms it has been formally exercised — treat as tentative only.</div>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Sep 12 · Wrap / Load-Out · Page 8 of 9</div>
+  </div>
+</div>
+
+<div class="page day-page" id="team">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
+      <span class="topbar-wordmark">cocoon</span>
+      <div class="topbar-divider"></div>
+      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+    </div>
+    <div class="topbar-meta">Production Team &amp; Key Contacts</div>
+  </div>
+  <div class="team-body">
+    <div class="glance-note" style="margin:0;">All scope, cost and contractual matters run through Cocoon in writing — anything discussed on a walkthrough or call gets a same-day written recap before it's treated as settled.</div>
+    <div class="team-cols">
+      <div class="team-col">
+        <div class="team-col-head">Fendi / LVMH</div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Emily Kafka</span><a class="p-phone pb tel-link" href="tel:+19172441785">917-244-1785</a></div>
+          <div class="p-role">Senior Director, Private Client Relations — lead contact</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Elisabeth Hall</span><a class="p-phone pb tel-link" href="tel:+13478613968">347-861-3968</a></div>
+          <div class="p-role">Manager, Private Client Relations — day-to-day logistics</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Stephen Keefe</span><a class="p-phone pb tel-link" href="tel:+19173405772">917-340-5772</a></div>
+          <div class="p-role">VM / fixture-build site contact</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Rachelle Laroche</span><span class="p-phone tbd">On file</span></div>
+          <div class="p-role">VP, Chief Commercial &amp; IP Counsel, LVMH — contract execution</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Chloe Diamond</span><span class="p-phone tbd">On file</span></div>
+          <div class="p-role">Fendi — cc'd contact</div>
+        </div>
+      </div>
+      <div class="team-col">
+        <div class="team-col-head">Cocoon &amp; Academy Mansion</div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Eduard Monteagudo</span><a class="p-phone tel-link" href="tel:+19173983938">917-398-3938</a></div>
+          <div class="p-role">Cocoon Founder</div>
+          <div class="p-note">Primary contact for all confirmed scope, cost &amp; contractual matters</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Roger Dong</span><span class="p-phone tbd">On file — TBD</span></div>
+          <div class="p-role">Cocoon Casa Manager</div>
+          <div class="p-note">Walkthroughs, vendor coordination, condition video — confirm current assignment, see Open Items</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Jon Siegel</span><a class="p-phone tel-link" href="tel:+12125931070">212-593-1070</a></div>
+          <div class="p-role">Academy Mansion — on-site venue contact</div>
+        </div>
+        <div class="person-row">
+          <div class="p-name-row"><span class="p-name">Laurel Greenman</span><a class="p-phone tel-link" href="tel:+13238288815">323-828-8815</a></div>
+          <div class="p-role">Academy Mansion — contract &amp; insurance</div>
+          <div class="p-note">Currently chasing Fendi's COI</div>
+        </div>
+      </div>
+      <div class="team-col">
+        <div class="team-col-head">Production Vendors</div>
+        <div class="vendor-row"><div><div class="v-name">NY Layout Pros</div><div class="v-role">Floor protection — wood floor areas</div></div><span class="v-phone">Victoria 845-325-6998</span></div>
+        <div class="vendor-row"><div><div class="v-name">Natural Wireless</div><div class="v-role">WiFi / IT — with Fendi's IT lead</div></div><span class="v-phone">Ben 201-785-4979</span></div>
+        <div class="vendor-row"><div><div class="v-name">Ontime Communications Pro</div><div class="v-role">Parking permit — signage, cones, monitoring</div></div><span class="v-phone tbd">Wendy / Robert</span></div>
+        <div class="vendor-row"><div><div class="v-name">Brinks</div><div class="v-role">Jewelry courier — AM delivery, PM pickup</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Catering (unnamed)</div><div class="v-role">Equipment drop-off, AM on live days</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Florals (unnamed)</div><div class="v-role">Van arrival Sep 7 end of day</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Imperial Cleaning</div><div class="v-role">Post-checkout deep clean</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">RK Crew</div><div class="v-role">Move-in / move-out labor</div></div><span class="v-phone tbd">Robert — on file</span></div>
+        <div class="vendor-row"><div><div class="v-name">ICAT Logistics</div><div class="v-role">COI correction in progress — see Open Items</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Broadway Party Rentals Inc.</div><div class="v-role">COI correction in progress — see Open Items</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Ron Wendt Design</div><div class="v-role">COI correction in progress — see Open Items</div></div><span class="v-phone tbd">TBD</span></div>
+        <div class="vendor-row"><div><div class="v-name">Robert Kane &amp; Crew LLC</div><div class="v-role">COI correction in progress — possible duplicate</div></div><span class="v-phone tbd">TBD</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="plan-footer">
+    <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-right">Team &amp; Contacts · Page 9 of 9</div>
+  </div>
+</div>
