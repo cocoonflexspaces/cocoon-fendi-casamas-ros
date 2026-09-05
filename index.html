@@ -17,8 +17,8 @@ a.tel-link:hover { border-bottom-style: solid; }
 }
 .topbar { display: flex; align-items: center; justify-content: space-between; padding: 11px 36px; border-bottom: 1px solid var(--rule); background: var(--cream); flex-shrink: 0; gap: 10px; }
 .topbar-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.topbar-mark { width: 18px; height: 18px; flex-shrink: 0; }
-.topbar-wordmark { font-size: 13px; font-weight: 800; letter-spacing: 0.02em; color: var(--ink); text-transform: lowercase; }
+.topbar-mark { display: inline-block; height: 18px; width: 17px; flex-shrink: 0; background: url('data:image/png;base64,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') no-repeat center / contain; }
+.topbar-wordmark { display: inline-block; height: 12px; width: 68px; flex-shrink: 0; background: url('data:image/png;base64,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') no-repeat center / contain; }
 .topbar-divider { width: 1px; height: 16px; background: var(--rule); flex: 0 0 auto; margin: 0 6px; }
 .topbar-title { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .topbar-meta { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink-mute); white-space: nowrap; flex-shrink: 0; }
@@ -260,8 +260,8 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page" id="cover">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
       <div class="topbar-title">Casa Mas · 2 East 63rd Street, New York, NY 10065</div>
     </div>
@@ -273,7 +273,7 @@ a.tel-link:hover { border-bottom-style: solid; }
       <div>
         <div class="superhead">Fendi Private Client Presentation · New Collection &amp; Creative Director</div>
         <div class="cover-title">The Private<br>Showing.<span> </span><span>ROS.</span></div>
-        <div class="cover-subtitle">Casa Mas · 2 East 63rd Street, New York, NY 10065 — Academy Mansion, Floors 1 &amp; 2</div>
+        <div class="cover-subtitle">Casa Mas · 2 East 63rd Street, New York, NY 10065 — DOMUS NYC, Floors 1 &amp; 2</div>
         <div class="cover-divider"></div>
         <div class="stat-row">
           <div class="stat-item"><div class="num">Sep 6</div><div class="lbl">Check-In<br>Sunday</div></div>
@@ -287,7 +287,7 @@ a.tel-link:hover { border-bottom-style: solid; }
         <div class="spec-grid">
           <div class="spec-item">
             <div class="spec-label">Address</div>
-            <div class="spec-value">2 East 63rd Street (Academy Mansion)</div>
+            <div class="spec-value">2 East 63rd Street (DOMUS NYC)</div>
           </div>
           <div class="spec-item">
             <div class="spec-label">Footprint</div>
@@ -347,7 +347,7 @@ a.tel-link:hover { border-bottom-style: solid; }
           <div class="fi-row">
             <div class="fi-num">Sun 9/6</div>
             <div class="fi-name">Check-In &amp; Setup</div>
-            <div class="fi-rooms">Floor protection install — OT to 8am start</div>
+            <div class="fi-rooms">Floor protection 8am · Fendi call 10am (OT to 10pm)</div>
           </div>
           <div class="fi-row">
             <div class="fi-num">Mon 9/7</div>
@@ -378,10 +378,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="quickref">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Week at a Glance &amp; Quick Reference</div>
   </div>
@@ -398,9 +398,9 @@ a.tel-link:hover { border-bottom-style: solid; }
         <div class="gc-date">Sunday</div>
         <div class="gc-day">Sep 6</div>
         <div class="gc-headline">Check-In &amp; Setup</div>
-        <div class="gc-window">Access 8:00am – 8:00pm (OT)</div>
+        <div class="gc-window">Access 8:00am – 10:00pm (OT)</div>
         <ul class="gc-list">
-          <li>Floor protection Install #1</li>
+          <li>Floor protection call 8am · Fendi call 10am</li>
           <li>VM, product &amp; IT trucks</li>
         </ul>
       </div>
@@ -454,8 +454,8 @@ a.tel-link:hover { border-bottom-style: solid; }
           <a class="qc-phone tel-link" href="tel:+19173983938">917-398-3938</a>
         </div>
         <div class="qc-row">
-          <div class="qc-who"><div class="qc-name">Roger Dong</div><div class="qc-role">Cocoon — Casa Manager (confirm assignment, see Open Items)</div></div>
-          <span class="qc-phone" style="color:var(--ink-mute);">On file</span>
+          <div class="qc-who"><div class="qc-name">Roger Dong</div><div class="qc-role">Cocoon — Casa Manager</div></div>
+          <a class="qc-phone tel-link" href="tel:+16466430947">646-643-0947</a>
         </div>
         <div class="qc-row">
           <div class="qc-who"><div class="qc-name">Emily Kafka</div><div class="qc-role pb">Fendi — Senior Director, Private Client Relations</div></div>
@@ -466,11 +466,11 @@ a.tel-link:hover { border-bottom-style: solid; }
           <a class="qc-phone pb tel-link" href="tel:+13478613968">347-861-3968</a>
         </div>
         <div class="qc-row">
-          <div class="qc-who"><div class="qc-name">Jon Siegel</div><div class="qc-role">Academy Mansion — on-site venue contact</div></div>
+          <div class="qc-who"><div class="qc-name">Jon Siegel</div><div class="qc-role">DOMUS NYC — on-site venue contact</div></div>
           <a class="qc-phone tel-link" href="tel:+12125931070">212-593-1070</a>
         </div>
         <div class="qc-row">
-          <div class="qc-who"><div class="qc-name">Laurel Greenman</div><div class="qc-role">Academy Mansion — contract &amp; insurance (chasing COI)</div></div>
+          <div class="qc-who"><div class="qc-name">Laurel Greenman</div><div class="qc-role">DOMUS NYC — contract &amp; insurance (chasing COI)</div></div>
           <a class="qc-phone tel-link" href="tel:+13238288815">323-828-8815</a>
         </div>
       </div>
@@ -485,14 +485,14 @@ a.tel-link:hover { border-bottom-style: solid; }
         <div class="ot-callout">
           <div class="ot-head">If You Need to Ask for Overtime</div>
           <div class="ot-rate">$6,330 / hour</div>
-          <div class="ot-note">Applies to any time beyond the confirmed access window for that day. Two OT blocks already confirmed: 2 hrs on Sep 6 (early floor-protection install) and 2 hrs on Sep 8 (8–10pm, for the 7–9pm VIP appointments). Confirm with Eduard before extending any call time.</div>
+          <div class="ot-note">Applies to any time beyond the confirmed access window for that day. Two OT blocks already confirmed: 2 hrs on Sep 6 (extends the day to 10pm, 8am–10pm total) and 2 hrs on Sep 8 (8–10pm, for the 7–9pm VIP appointments). Confirm with Eduard before extending any call time.</div>
         </div>
       </div>
     </div>
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Week at a Glance · Page 2 of 9</div>
   </div>
 </div>
@@ -500,26 +500,26 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="open-items">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Open Items to Close</div>
   </div>
   <div class="items-body">
-    <div class="glance-note" style="margin:0;">Everything below is unresolved as of September 4 and needs an answer before or during production week. Grouped by who the next action sits with — the COI item is time-critical.</div>
+    <div class="glance-note" style="margin:0;">Everything below is unresolved as of September 5 and needs an answer before or during production week. Grouped by who the next action sits with — the COI item is time-critical.</div>
     <div class="items-cols">
       <div class="items-col">
         <div>
           <div class="items-group-head">Most Urgent — Before Sunday Check-In</div>
           <div class="item-row">
             <div class="item-status"><span class="pill urgent">Urgent</span></div>
-            <div class="item-text"><strong>Fendi's main venue COI.</strong> Academy Mansion (Laurel Greenman) requires $1,000,000 primary + $2,000,000 umbrella before work begins Sunday. Eduard said today it "should be ready within the hour" — but the most recent message in the thread is Laurel asking again: "we'll need it before you start on Sunday." Not yet confirmed delivered.</div>
+            <div class="item-text"><strong>Fendi's main venue COI.</strong> DOMUS NYC (Laurel Greenman) requires $1,000,000 primary + $2,000,000 umbrella before work begins Sunday. Eduard said today it "should be ready within the hour" — but the most recent message in the thread is Laurel asking again: "we'll need it before you start on Sunday." Not yet confirmed delivered.</div>
           </div>
           <div class="item-row">
             <div class="item-status"><span class="pill pending">Pending</span></div>
-            <div class="item-text"><strong>Certificate Holder correction.</strong> Laurel flagged the address on COIs sent so far is wrong ("shouldn't be 2 East 63rd Street") — must match Academy Mansion's Insurance Requirements doc exactly.</div>
+            <div class="item-text"><strong>Certificate Holder correction.</strong> Laurel flagged the address on COIs sent so far is wrong ("shouldn't be 2 East 63rd Street") — must match DOMUS NYC's Insurance Requirements doc exactly.</div>
           </div>
           <div class="item-row">
             <div class="item-status"><span class="pill pending">Pending</span></div>
@@ -570,9 +570,7 @@ a.tel-link:hover { border-bottom-style: solid; }
           <div class="fb-head">⚑ Flags to Confirm</div>
           <div class="fb-text">
             <strong>Third floor.</strong> Added to the contract June 29 as a discounted add-on, then Fendi confirmed in writing Aug 7 they only need floors 1–2 — this ROS reflects Floors 1–2 as final. Reconfirm before Sunday.<br><br>
-            <strong>Venue point of contact.</strong> The operational ticket lists Jon Siegel on-site; the contract/insurance ticket runs through Laurel Greenman. Both included as contacts — confirm current division of responsibility.<br><br>
-            <strong>Casa Manager assignment.</strong> Roger Dong is documented as Casa Manager for this booking, but is also referenced elsewhere as the manager for a different property (Casa Brutal) — worth a quick internal confirmation.<br><br>
-            <strong>Security deposit / escrow — resolved Sept 1–2.</strong> No true escrow account exists; Fendi agreed to skip escrow and remit any damage payment at departure per contract, with a joint Roger / Stephen Keefe walkthrough at arrival.
+            <strong>Venue point of contact.</strong> The operational ticket lists Jon Siegel on-site; the contract/insurance ticket runs through Laurel Greenman. Both included as contacts — confirm current division of responsibility.
           </div>
         </div>
       </div>
@@ -580,7 +578,7 @@ a.tel-link:hover { border-bottom-style: solid; }
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Open Items · Page 3 of 9</div>
   </div>
 </div>
@@ -588,10 +586,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="day-6">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Day 1 of 7</div>
   </div>
@@ -600,12 +598,12 @@ a.tel-link:hover { border-bottom-style: solid; }
       <div class="dh-badge">6</div>
       <div>
         <div class="dh-title">Sunday, September 6 — Check-In / Prep Day 1</div>
-        <div class="dh-sub">Casa Mas — Academy Mansion, Floors 1 &amp; 2</div>
+        <div class="dh-sub">Casa Mas — DOMUS NYC, Floors 1 &amp; 2</div>
       </div>
     </div>
     <div class="dh-right">
       <div class="dh-access">Client Access</div>
-      <div class="dh-access-val">8:00 AM – 8:00 PM (OT)</div>
+      <div class="dh-access-val">8:00 AM – 10:00 PM (OT)</div>
     </div>
   </div>
   <div class="day-body">
@@ -614,21 +612,21 @@ a.tel-link:hover { border-bottom-style: solid; }
       <tbody>
         <tr class="row-highlight">
           <td class="rt-time">8:00 AM</td>
-          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
-          <td class="rt-item">Client check-in. Fendi paid for 2 hours of additional space rental (OT) to move the contracted 10am start up to 8am so Visual Merchandising can begin setup at the top of the day.<span class="rt-note">Elisabeth Hall: "Our Visual Merchandising team is planning to begin setup at the start of our contracted access on Sunday, September 6th, at 8:00am."</span></td>
-          <td class="rt-owner">Fendi VM</td>
-        </tr>
-        <tr>
-          <td class="rt-time">8:00 AM</td>
           <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
-          <td class="rt-item">Floor protection Install #1 begins across both floors, timed to the 8am call time. Wood-floor areas by NY Layout Pros; marble areas handled directly by Academy Mansion, $300 cash to Jon Siegel or Roger on arrival.<span class="rt-note flag">Property rule: install cannot happen outside contracted hours — this is exactly why the 8am OT was needed.</span></td>
-          <td class="rt-owner">NY Layout Pros</td>
+          <td class="rt-item">Floor protection call time — Install #1 begins across both floors at 8am, ahead of Fendi's own 10am arrival; DOMUS NYC pushed for protection to go down earlier, and this is that earlier start. Wood-floor areas by NY Layout Pros; marble areas handled directly by DOMUS NYC, $300 cash to Jon Siegel or Roger on arrival. Roger hyper-documents the space on video throughout the install, so there's a full record of the space's condition before any Fendi material arrives.<span class="rt-note flag">Property rule: install cannot happen outside contracted hours — this is exactly why the OT was needed.</span></td>
+          <td class="rt-owner">NY Layout Pros / Roger Dong</td>
         </tr>
         <tr>
           <td class="rt-time">8:00 AM</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
           <td class="rt-item">Two box trucks arrive with props/fixtures. Remain on-site until fully unloaded, then depart.</td>
           <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">10:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Client check-in — Fendi's Visual Merchandising team begins at their contracted 10am start time. Fendi paid for 2 hours of additional space rental (OT) so the day runs 8am–10pm (14 hours total) rather than the standard 8am–8pm, giving floor protection and prep a longer runway ahead of setup.<span class="rt-note">Elisabeth Hall: "Our Visual Merchandising team is planning to begin setup at the start of our contracted access on Sunday, September 6th."</span></td>
+          <td class="rt-owner">Fendi VM</td>
         </tr>
         <tr>
           <td class="rt-time">~5:00 PM</td>
@@ -645,7 +643,7 @@ a.tel-link:hover { border-bottom-style: solid; }
         <tr>
           <td class="rt-time">All Day</td>
           <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
-          <td class="rt-item">Parking permit active — ~4 spaces held near the Academy Mansion entrance for VM, product and floor-protection vehicles.<span class="rt-note">Confirmed through NYC's Street Activity Permit Office for Sep 5, 6, 7 &amp; 12 plus supplemental days.</span></td>
+          <td class="rt-item">Parking permit active — ~4 spaces held near the DOMUS NYC entrance for VM, product and floor-protection vehicles.<span class="rt-note">Confirmed through NYC's Street Activity Permit Office for Sep 5, 6, 7 &amp; 12 plus supplemental days.</span></td>
           <td class="rt-owner">Ontime Communications Pro</td>
         </tr>
         <tr>
@@ -659,7 +657,7 @@ a.tel-link:hover { border-bottom-style: solid; }
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Sep 6 · Check-In &amp; Prep · Page 4 of 9</div>
   </div>
 </div>
@@ -667,10 +665,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="day-7">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Day 2 of 7</div>
   </div>
@@ -692,6 +690,12 @@ a.tel-link:hover { border-bottom-style: solid; }
       <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
       <tbody>
         <tr class="row-highlight">
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">VM set-up final touches; merch set-up continues.</td>
+          <td class="rt-owner">Fendi VM</td>
+        </tr>
+        <tr>
           <td class="rt-time">All Day</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
           <td class="rt-item">No truck deliveries today — the Labor Day parade closes truck access, so the Fendi team continues setup on foot.</td>
@@ -704,10 +708,22 @@ a.tel-link:hover { border-bottom-style: solid; }
           <td class="rt-owner">Florals</td>
         </tr>
         <tr>
+          <td class="rt-time">6:00 PM</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">HQ venue walk-through.</td>
+          <td class="rt-owner">Cocoon / DOMUS NYC</td>
+        </tr>
+        <tr>
           <td class="rt-time">Evening</td>
           <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
           <td class="rt-item">Floor protection Removal #1 — once build-out is complete and before Live Day 1 begins.<span class="rt-note">NY Layout Pros requires a 45–60 minute head start to pull materials.</span></td>
           <td class="rt-owner">NY Layout Pros</td>
+        </tr>
+        <tr>
+          <td class="rt-time">8:00 PM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Fendi and all vendors depart; overnight guards in place.</td>
+          <td class="rt-owner">Fendi / Security</td>
         </tr>
       </tbody>
     </table>
@@ -715,7 +731,7 @@ a.tel-link:hover { border-bottom-style: solid; }
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Sep 7 · Labor Day Prep · Page 5 of 9</div>
   </div>
 </div>
@@ -723,10 +739,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="day-8">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Day 3 of 7</div>
   </div>
@@ -748,6 +764,18 @@ a.tel-link:hover { border-bottom-style: solid; }
       <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
       <tbody>
         <tr>
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Deep clean; porter arrives.</td>
+          <td class="rt-owner">Imperial Cleaning</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Florals arrive. HJ delivery, Maria Cristina D. as POC.</td>
+          <td class="rt-owner">Florals / HJ</td>
+        </tr>
+        <tr>
           <td class="rt-time">Morning</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
           <td class="rt-item">Brinks van delivers jewelry.</td>
@@ -756,13 +784,37 @@ a.tel-link:hover { border-bottom-style: solid; }
         <tr>
           <td class="rt-time">Morning</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
-          <td class="rt-item">Catering van drops off equipment.</td>
-          <td class="rt-owner">Catering</td>
+          <td class="rt-item">Catering arrives and drops off equipment. Photographer arrives; retail support and corporate staff arrive.</td>
+          <td class="rt-owner">Catering / Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Debrief with on-site retail support and Fendi HQ before appointments begin.</td>
+          <td class="rt-owner">Cocoon / Fendi</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">11:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Private appointments begin.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Midday</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Lunch break.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Evening</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Private appointments end.</td>
+          <td class="rt-owner">Fendi</td>
         </tr>
         <tr class="row-highlight">
           <td class="rt-time">7:00–9:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
-          <td class="rt-item">Special VIP appointments — the reason for tonight's extended hours.</td>
+          <td class="rt-item">Special VIP appointments — the reason for tonight's extended hours. Studio Team Client Cocktail, Studio Team Client Experience and Studio Team Client Dinner run through this window.</td>
           <td class="rt-owner">Fendi</td>
         </tr>
         <tr>
@@ -770,6 +822,12 @@ a.tel-link:hover { border-bottom-style: solid; }
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
           <td class="rt-item">Brinks van returns to pick up jewelry.</td>
           <td class="rt-owner">Brinks</td>
+        </tr>
+        <tr>
+          <td class="rt-time">9:00 PM</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">HJ departs; overnight guards in place.</td>
+          <td class="rt-owner">Security</td>
         </tr>
         <tr>
           <td class="rt-time">10:00 PM</td>
@@ -782,7 +840,7 @@ a.tel-link:hover { border-bottom-style: solid; }
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Sep 8 · Live Day 1 · Page 6 of 9</div>
   </div>
 </div>
@@ -790,10 +848,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="day-9">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Days 4–6 of 7</div>
   </div>
@@ -815,30 +873,60 @@ a.tel-link:hover { border-bottom-style: solid; }
       <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
       <tbody>
         <tr>
-          <td class="rt-time">Morning</td>
-          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
-          <td class="rt-item">Brinks van delivers jewelry (same pattern each morning); collected in the evening per that day's schedule.</td>
-          <td class="rt-owner">Brinks</td>
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Deep clean; porter arrives.</td>
+          <td class="rt-owner">Imperial Cleaning</td>
         </tr>
         <tr>
           <td class="rt-time">Morning</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
-          <td class="rt-item">Catering van drops off equipment.</td>
-          <td class="rt-owner">Catering</td>
+          <td class="rt-item">Florals arrive. HJ delivery each morning. Brinks van delivers jewelry; collected in the evening per that day's schedule.</td>
+          <td class="rt-owner">Florals / HJ / Brinks</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">Catering arrives and drops off equipment. Photographer arrives; retail support and corporate staff arrive.</td>
+          <td class="rt-owner">Catering / Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Morning</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">Debrief with on-site retail support and Fendi HQ before appointments begin.</td>
+          <td class="rt-owner">Cocoon / Fendi</td>
         </tr>
         <tr class="row-highlight">
-          <td class="rt-time">—</td>
+          <td class="rt-time">12:00 PM</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
-          <td class="rt-item">Private appointments run through each day per Fendi's own schedule.<span class="rt-note flag">Exact daily clock times not yet detailed in the source tickets beyond the general 8am–8pm window — see Open Items.</span></td>
+          <td class="rt-item"><strong>Wed Sep 9 —</strong> Private appointments begin; lunch break early afternoon; appointments end ~6:00 PM.</td>
           <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">11:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item"><strong>Thu Sep 10 —</strong> Private appointments begin; lunch break; appointments end ~6:00 PM.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr class="row-highlight">
+          <td class="rt-time">9:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item"><strong>Fri Sep 11 —</strong> Private appointments begin; lunch break 1–2 PM; appointments end ~6:00 PM. Last live day.</td>
+          <td class="rt-owner">Fendi</td>
+        </tr>
+        <tr>
+          <td class="rt-time">Evening</td>
+          <td class="rt-track"><span class="track-pill cocoon">Cocoon</span></td>
+          <td class="rt-item">HJ departs; overnight guards in place — each of the three nights.</td>
+          <td class="rt-owner">Security</td>
         </tr>
       </tbody>
     </table>
-    <div class="day-footnote">Day-specific detail beyond this general pattern was not broken out separately for Sep 9–11 in the source tickets. This page splits into three full day pages, each with confirmed appointment counts and exact hours, once Fendi's day-by-day schedule is finalized — <strong>expected in the updated ROS this weekend.</strong></div>
+    <div class="day-footnote">Per-day appointment windows above reflect the updated event schedule received Sep 5. Exact private-appointment headcounts are still Fendi's to confirm — see Open Items.</div>
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Sep 9–11 · Live Days 2–4 · Page 7 of 9</div>
   </div>
 </div>
@@ -846,10 +934,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="day-12">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Day 7 of 7</div>
   </div>
@@ -870,6 +958,12 @@ a.tel-link:hover { border-bottom-style: solid; }
     <table class="ros-table">
       <thead><tr><th>Time</th><th>Track</th><th>Action</th><th>Owner / Supplier</th></tr></thead>
       <tbody>
+        <tr class="row-highlight">
+          <td class="rt-time">8:00 AM</td>
+          <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
+          <td class="rt-item">VM and merch breakdown &amp; load-out — runs all day.</td>
+          <td class="rt-owner">Fendi VM</td>
+        </tr>
         <tr>
           <td class="rt-time">8:00 AM</td>
           <td class="rt-track"><span class="track-pill pb">Fendi</span></td>
@@ -900,7 +994,7 @@ a.tel-link:hover { border-bottom-style: solid; }
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Sep 12 · Wrap / Load-Out · Page 8 of 9</div>
   </div>
 </div>
@@ -908,10 +1002,10 @@ a.tel-link:hover { border-bottom-style: solid; }
 <div class="page day-page" id="team">
   <div class="topbar">
     <div class="topbar-brand">
-      <svg class="topbar-mark" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/><circle cx="9" cy="9" r="2.6" fill="#F54029"/></svg>
-      <span class="topbar-wordmark">cocoon</span>
+      <span class="topbar-mark" role="img" aria-label="Cocoon mark"></span>
+      <span class="topbar-wordmark" role="img" aria-label="cocoon"></span>
       <div class="topbar-divider"></div>
-      <div class="topbar-title">Fendi × Casa Mas · Academy Mansion</div>
+      <div class="topbar-title">Fendi × Casa Mas · DOMUS NYC</div>
     </div>
     <div class="topbar-meta">Production Team &amp; Key Contacts</div>
   </div>
@@ -942,24 +1036,24 @@ a.tel-link:hover { border-bottom-style: solid; }
         </div>
       </div>
       <div class="team-col">
-        <div class="team-col-head">Cocoon &amp; Academy Mansion</div>
+        <div class="team-col-head">Cocoon &amp; DOMUS NYC</div>
         <div class="person-row">
           <div class="p-name-row"><span class="p-name">Eduard Monteagudo</span><a class="p-phone tel-link" href="tel:+19173983938">917-398-3938</a></div>
           <div class="p-role">Cocoon Founder</div>
           <div class="p-note">Primary contact for all confirmed scope, cost &amp; contractual matters</div>
         </div>
         <div class="person-row">
-          <div class="p-name-row"><span class="p-name">Roger Dong</span><span class="p-phone tbd">On file — TBD</span></div>
+          <div class="p-name-row"><span class="p-name">Roger Dong</span><a class="p-phone tel-link" href="tel:+16466430947">646-643-0947</a></div>
           <div class="p-role">Cocoon Casa Manager</div>
-          <div class="p-note">Walkthroughs, vendor coordination, condition video — confirm current assignment, see Open Items</div>
+          <div class="p-note">Walkthroughs, vendor coordination, condition video</div>
         </div>
         <div class="person-row">
           <div class="p-name-row"><span class="p-name">Jon Siegel</span><a class="p-phone tel-link" href="tel:+12125931070">212-593-1070</a></div>
-          <div class="p-role">Academy Mansion — on-site venue contact</div>
+          <div class="p-role">DOMUS NYC — on-site venue contact</div>
         </div>
         <div class="person-row">
           <div class="p-name-row"><span class="p-name">Laurel Greenman</span><a class="p-phone tel-link" href="tel:+13238288815">323-828-8815</a></div>
-          <div class="p-role">Academy Mansion — contract &amp; insurance</div>
+          <div class="p-role">DOMUS NYC — contract &amp; insurance</div>
           <div class="p-note">Currently chasing Fendi's COI</div>
         </div>
       </div>
@@ -982,7 +1076,7 @@ a.tel-link:hover { border-bottom-style: solid; }
   </div>
   <div class="plan-footer">
     <div class="plan-footer-left">cocoon flex spaces · cocoonflexspaces.com</div>
-    <div class="plan-footer-center">Fendi × Casa Mas · Academy Mansion</div>
+    <div class="plan-footer-center">Fendi × Casa Mas · DOMUS NYC</div>
     <div class="plan-footer-right">Team &amp; Contacts · Page 9 of 9</div>
   </div>
 </div>
